@@ -30,11 +30,13 @@ button:hover {
 }
 
 .menu-page {
-  height: 50vh;
+  height: 80vh;
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 5rem;
+  margin-top: 0;
+  margin-bottom: 0.5em;
   color: #293264;
 }
 
@@ -43,7 +45,7 @@ button:hover {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.5rem;
-  height: 50vh;
+  height: 60vh;
 }
 
 select {
@@ -144,6 +146,7 @@ select {
   font-weight: 700;
   text-align: center;
   color: #293264;
+  margin-top: 0;
 }
 
 .restart-btn, 
