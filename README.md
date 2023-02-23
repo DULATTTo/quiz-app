@@ -1,5 +1,5 @@
 # Quizzical
-Quizzical is a quiz game web application that allows users to choose a category, difficulty level, and the number of questions. The app is built with HTML/CSS, JavaScript, and React and is fully responsive for mobile users. 
+Quizzical is a quiz game web application that allows users to choose a category, difficulty level, and the number of questions. The app is built with JavaScript and React and is fully responsive for mobile users. Quizzical uses the [Open Trivia Database API](https://opentdb.com/api_config.php) to fetch quiz questions. This API provides a wide variety of categories and difficulty levels for questions, allowing users to customize their quiz experience.
 
 ## Getting Started
 
@@ -24,3 +24,4 @@ Quizzical has the following features:
 - Number of questions: Users can select the number of questions they want to answer.
 - Responsive design: The app is fully responsive for mobile users, allowing them to play the game on the go.
 - Score tracking: Users can see their score and the correct answers at the end of the quiz.
+
