@@ -1,6 +1,51 @@
 import React from "react"
 
 export default function SettingsPage(props) {
+    const options = {
+        category: [
+            { value: "", label: "Any Category" },
+            { value: "&category=9", label: "General Knowledge" },
+            { value: "&category=10", label: "Books" },
+            { value: "&category=11", label: "Films" },
+            { value: "&category=12", label: "Music" },
+            { value: "&category=31", label: "Japanese Anime & Manga" },
+            { value: "&category=15", label: "Video Games" },
+            { value: "&category=32", label: "Cartoon & Animations" },
+            { value: "&category=14", label: "Television" },
+            { value: "&category=16", label: "Board Games" },
+            { value: "&category=17", label: "Science & nature" },
+            { value: "&category=18", label: "Science: Computers" },
+            { value: "&category=19", label: "Science: Mathematics" },
+            { value: "&category=20", label: "Mythology" },
+            { value: "&category=21", label: "Sports" },
+            { value: "&category=22", label: "Geography" },
+            { value: "&category=23", label: "History" },
+            { value: "&category=24", label: "Politics" },
+            { value: "&category=27", label: "Animals" },
+            { value: "&category=28", label: "Vehicles" },
+            { value: "&category=29", label: "Comics" },
+        ],
+        difficulty: [
+            { value: "", label: "Any Difficulty" },
+            { value: "&difficulty=easy", label: "Easy" },
+            { value: "&difficulty=medium", label: "Medium" },
+            { value: "&difficulty=hard", label: "Hard" },
+        ],
+        questionsNum: [
+            { value: "amount=5", label: "5" },
+            { value: "amount=10", label: "10" },
+            { value: "amount=15", label: "15" },
+            { value: "amount=20", label: "20" },
+            { value: "amount=25", label: "25" },
+            { value: "amount=30", label: "30" },
+            { value: "amount=35", label: "35" },
+            { value: "amount=40", label: "40" },
+            { value: "amount=45", label: "45" },
+            { value: "amount=50", label: "50" },
+        ],
+    }   
+
+
     return (
         <div>
             <button 
@@ -22,27 +67,11 @@ export default function SettingsPage(props) {
                     onChange={(event) => props.handleChange(event)}
                     name="category"
                 >
-                    <option value="">Any Category</option>
-                    <option value="&category=9">General Knowledge</option>
-                    <option value="&category=10">Books</option>
-                    <option value="&category=11">Films</option>
-                    <option value="&category=12">Music</option>
-                    <option value="&category=31">Japanese Anime & Manga</option>
-                    <option value="&category=15">Video Games</option>
-                    <option value="&category=32">Cartoon & Animations</option>
-                    <option value="&category=14">Television</option>
-                    <option value="&category=16">Board Games</option>
-                    <option value="&category=17">Science & nature</option>
-                    <option value="&category=18">Science: Computers</option>
-                    <option value="&category=19">Science: Mathematics</option>
-                    <option value="&category=20">Mythology</option>
-                    <option value="&category=21">Sports</option>
-                    <option value="&category=22">Geography</option>
-                    <option value="&category=23">History</option>
-                    <option value="&category=24">Politics</option>
-                    <option value="&category=27">Animals</option>
-                    <option value="&category=28">Vehicles</option>
-                    <option value="&category=29">Comics</option>
+                    {options.category.map(({value, label}) => (
+                        <option key={value} value={value}>
+                            {label}
+                        </option>
+                    ))}
                 </select>
                 
                 <br />
@@ -54,10 +83,11 @@ export default function SettingsPage(props) {
                     onChange={(event) => props.handleChange(event)}
                     name="difficulty"
                 >
-                    <option value="">Any Difficulty</option>
-                    <option value="&difficulty=easy">Easy</option>
-                    <option value="&difficulty=medium">Medium</option>
-                    <option value="&difficulty=hard">Hard</option>
+                    {options.difficulty.map(({value, label}) => (
+                        <option key={value} value={value}>
+                            {label}
+                        </option>
+                    ))}
                 </select>
                 
                 <br />
@@ -69,16 +99,11 @@ export default function SettingsPage(props) {
                     onChange={(event) => props.handleChange(event)}
                     name="questionsNum"
                 >
-                    <option value="amount=5">5</option>
-                    <option value="amount=10">10</option>
-                    <option value="amount=15">15</option>
-                    <option value="amount=20">20</option>
-                    <option value="amount=25">25</option>
-                    <option value="amount=30">30</option>
-                    <option value="amount=35">35</option>
-                    <option value="amount=40">40</option>
-                    <option value="amount=45">45</option>
-                    <option value="amount=50">50</option>
+                    {options.questionsNum.map(({value, label}) => (
+                        <option key={value} value={value}>
+                            {label}
+                        </option>
+                    ))}
                 </select>
 
             </form>
